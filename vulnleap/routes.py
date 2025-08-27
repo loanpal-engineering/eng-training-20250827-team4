@@ -124,7 +124,8 @@ def register():
         
         password = request.form['password']
         confirm_password = request.form['confirm_password']
-        role = request.form['role']
+        # role = request.form['role']
+        role = 'normal'
         quote_id = None
         if 'quote_id' in request.form:
             quote_id = request.form['quote_id']
