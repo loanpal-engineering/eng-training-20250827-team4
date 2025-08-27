@@ -258,7 +258,7 @@ def quote_page(quote_id):
         flash("User not found.", "danger")
 
     quote = MortgageQuote.query.get(quote_id)
-    if not quote:
+    if not quote or quote.user_id != session['user_id']:
         flash("Quote not found.", "danger")
         return redirect(url_for('main.user'))
     return render_template('existing_quote.html', quote=quote)
