@@ -8,7 +8,7 @@ services:
       - MYSQL_USER=user
       - MYSQL_PASSWORD=password
       - MYSQL_DB=webappdb
-      - TEAM_NUMBER=1
+      - TEAM_NUMBER=4
       - MYSQL_SSL_MODE=ENABLED
     ports:
       - "9000:5555"
