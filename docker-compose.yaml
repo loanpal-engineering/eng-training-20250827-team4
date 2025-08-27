@@ -1,6 +1,6 @@
 services:
   webapp_instance:
-    build: 
+    build:
       context: .
       dockerfile: vulnleap/Dockerfile
     environment:
@@ -9,7 +9,7 @@ services:
       - MYSQL_PASSWORD=password
       - MYSQL_DB=webappdb
       - TEAM_NUMBER=1
-      - MYSQL_SSL_MODE=DISABLED
+      - MYSQL_SSL_MODE=ENABLED
     ports:
       - "9000:5555"
     depends_on:
